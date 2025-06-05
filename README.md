@@ -1,27 +1,19 @@
-# CRM-notes-analysis-tool
-Python tool that analyzes CRM note threads to understand conversation progression and generate dataset updates. The tool must process chronological notes for each company and determine the final state of engagement.
+# CRM Notes Analysis Tool
 
-  Just include a simple overview - don't paste all the technical details. Here's what the README should contain:
+A lightweight Python script for analyzing CRM note threads. It groups notes by company, tracks conversation progression, extracts contacts, and produces a JSON report summarizing engagement.
 
-  # CRM Notes Analysis Tool
+## Usage
 
-  A Python tool for analyzing conversation threads in CRM note exports to determine engagement status and extract actionable insights.
+```bash
+python analyze_crm_threads.py --input notes.csv --output analysis.json [--company-filter "Acme"]
+```
 
-  ## Overview
-  This tool processes chronological CRM notes to understand conversation progression rather than treating each note in isolation. It tracks how sales conversations evolve over time and provides recommendations for updating CRM records.
+### Input CSV Columns
+- Item ID
+- Item Name
+- Content Type
+- User
+- Created At
+- Update Content
 
-  ## Installation
-  ```bash
-  pip install -r requirements.txt
-
-  Usage
-
-  python analyze_crm_threads.py --input notes.csv --output analysis.json
-
-  Input Format
-
-  Expects CSV with columns: Item ID, Item Name, User, Created At, Update Content
-
-  Output
-
-  JSON file with thread analysis, discovered contacts, and recommended CRM updates.
+The output JSON includes thread statistics, contact information, and recommended status updates for each company.
