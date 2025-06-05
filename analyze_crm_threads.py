@@ -1,3 +1,4 @@
+codex/refactor-analyze_crm_threads-into-modules
 """Lightweight CLI for CRM notes thread analysis."""
 
 import argparse

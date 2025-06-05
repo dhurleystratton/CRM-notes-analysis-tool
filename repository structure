@@ -1,0 +1,14 @@
+CRM-notes-analysis-tool/
+  ├── README.md
+  ├── requirements.txt
+  ├── setup.py
+  ├── src/
+  │   ├── __init__.py
+  │   ├── thread_analyzer.py
+  │   ├── state_machine.py
+  │   ├── contact_extractor.py
+  │   └── report_generator.py
+  ├── tests/
+  │   └── test_analyzer.py
+  └── examples/
+      └── sample_analysis.json
