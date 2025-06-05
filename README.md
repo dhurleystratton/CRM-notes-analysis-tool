@@ -29,5 +29,3 @@
 
   The input CSV should include columns like Item ID, Item Name, Content Type, User, Created At and Update Content. The script outputs a JSON file with thread analysis
   and recommended CRM updates.
-
-  The output JSON includes thread statistics, contact information, and recommended status updates for each company.
