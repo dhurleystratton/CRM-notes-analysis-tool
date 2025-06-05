@@ -25,3 +25,13 @@ Python tool that analyzes CRM note threads to understand conversation progressio
   Output
 
   JSON file with thread analysis, discovered contacts, and recommended CRM updates.
+
+## Testing
+Run the test suite with:
+```bash
+python -m unittest discover
+```
+or using pytest:
+```bash
+pytest
+```
