@@ -1,37 +1,31 @@
-# CRM-notes-analysis-tool
-Python tool that analyzes CRM note threads to understand conversation progression and generate dataset updates. The tool must process chronological notes for each company and determine the final state of engagement.
+# CRM Notes Analysis Tool
 
-  Just include a simple overview - don't paste all the technical details. Here's what the README should contain:
-
-  # CRM Notes Analysis Tool
-
-  A Python tool for analyzing conversation threads in CRM note exports to determine engagement status and extract actionable insights.
+  A Python tool for analyzing chronological CRM note threads to determine engagement status and extract actionable insights.
 
   ## Overview
-  This tool processes chronological CRM notes to understand conversation progression rather than treating each note in isolation. It tracks how sales conversations evolve over time and provides recommendations for updating CRM records.
+  This package processes exported CRM notes as a conversation thread rather than isolated comments. It helps track how deals progress over time and suggests updates
+  for your CRM records.
 
   ## Installation
+  Install the dependencies:
+
   ```bash
   pip install -r requirements.txt
 
   Usage
 
-  python analyze_crm_threads.py --input notes.csv --output analysis.json
+  Run the analyzer on a CSV file of CRM notes:
 
-  Input Format
+  python analyze_crm_threads.py --input notes.csv --output analysis.json [--company-filter "Acme"]
 
-  Expects CSV with columns: Item ID, Item Name, User, Created At, Update Content
+  Input CSV Columns
 
-  Output
+  - Item ID
+  - Item Name
+  - Content Type
+  - User
+  - Created At
+  - Update Content
 
-  JSON file with thread analysis, discovered contacts, and recommended CRM updates.
-
-## Testing
-Run the test suite with:
-```bash
-python -m unittest discover
-```
-or using pytest:
-```bash
-pytest
-```
+  The input CSV should include columns like Item ID, Item Name, Content Type, User, Created At and Update Content. The script outputs a JSON file with thread analysis
+  and recommended CRM updates.
